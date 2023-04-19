@@ -1,0 +1,8 @@
+export default function handleResponseFromAPI(promise) {
+    process.on("unhandledRejection", () => );
+        Error('The fake API is not working currently'),
+      );
+    }
+  });
+  return firstPromise;
+}
