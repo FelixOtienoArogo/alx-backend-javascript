@@ -1,0 +1,10 @@
+export default function updateUniqueItems(groc) {
+  const update = groc;
+  try {
+    update.forEach((value, key) => {
+	    if (value === 1) {
+        update.set(key, 100);
+	    }
+    });
+  } catch (err) { Error('Cannot process'); }
+}

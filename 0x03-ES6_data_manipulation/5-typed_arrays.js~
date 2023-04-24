@@ -1,0 +1,8 @@
+export default function (length, position, value) {
+    var buffer = new ArrayBuffer(length);
+    var view = new Int8Array (buffer);
+    try {
+	view [position] = value;
+    }catch (error) {Error("Position outside range")}
+    return buffer;
+}
