@@ -1,0 +1,49 @@
+interface Student {
+	firstName: string;
+	lastName: string;
+	age: number;
+	location: string;
+}
+
+const student1: Student =  {
+	firstName: 'Felix',
+	lastName: 'Otieno',
+	age: 24,
+	location: 'Nairobi'
+};
+const student2: Student = {
+	firstName: 'Sharon',
+	lastName: 'Mwajulu',
+	age: 23,
+	location: 'Juja'
+};
+const studentsList: Array<Student> = [student1, student2];
+
+const table = document.createElement('table');
+const thead = document.createElement('thead');
+const tbody = document.createElement('tbody');
+
+const head = thead.insertRow();
+let name = head.insertCell();
+let location = head.insertCell();
+name.innerText = 'Name';
+location.innerText = 'Location';
+
+studentsList.forEach((student) => {
+	let body = tbody.insertRow();
+	for (let key in student ){
+		if (key == 'firstName'){
+			let cell = body.insertCell();
+			cell.innerText = student.firstName;
+		}
+		if (key == 'location'){
+			let cell = body.insertCell();
+			cell.innerText = student.location;
+		}
+	}
+
+});
+table.appendChild(thead);
+table.appendChild(tbody);
+document.body.appendChild(table);
+
