@@ -8,8 +8,7 @@ const app = http.createServer(async (req, res) => {
     let out = 'This is the list of our students\n';
     await students(process.argv[2]).then((message) => {
       out += message;
-	out += '\n'
-      res.write(Buffer.from(out));
+      res.end(Buffer.from(out));
     }).catch((err) => {
       out += err.message;
       res.end(out);
