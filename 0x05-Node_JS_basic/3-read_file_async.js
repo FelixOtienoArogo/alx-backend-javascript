@@ -35,7 +35,7 @@ function countStudents(path) {
             }
             const string = name.map(String).join(', ');
             console.log(`Number of students in ${keys[j]}: ${fields[keys[j]]}. List: ${string}`);
-            message += `Number of students in ${keys[j]}: ${fields[keys[j]]}. List: ${string}`;
+            message += `Number of students in ${keys[j]}: ${fields[keys[j]]}. List: ${string}\n`;
             name = [];
           }
         };
