@@ -24,8 +24,7 @@ class StudentsController {
     const { major } = request.params;
 
     if (!['CS', 'SWE'].includes(major)) {
-      response.status(500);
-      response.send('Major parameter must be CS or SWE');
+      response.status(500).send('Major parameter must be CS or SWE');
     }
 
     readDatabase(path).then((students) => {
