@@ -16,12 +16,12 @@ describe(`Index page`, () => {
 
  it(`GET /cart/:id(number)`, (done) => {
   const call = {
-          url: 'http://localhost:7865/cart/10',
+	  url: 'http://localhost:7865/cart/12',
           method: 'GET',
   };
   request(call, (error, response, body) => {
    expect(response.statusCode).to.equal(200);
-   expect(body).to.equal('Payment methods for cart :10');
+   expect(body).to.equal('Payment methods for cart 12');
    done();
   });
  });
