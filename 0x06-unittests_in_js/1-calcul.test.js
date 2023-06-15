@@ -72,7 +72,7 @@ describe('calculateNumber', () => {
     });
 
     it('should test for zero', () => {
-      assert.strictEqual(calculateNumber('DIVIDE', 0, 0), 'Error');
+      assert.strictEqual(calculateNumber('DIVIDE', 4, 0.2), 'Error');
     });
 
     it('should test for negative', () => {
