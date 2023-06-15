@@ -17,4 +17,12 @@ describe('calculateNumber', () => {
   it('should test for rounding down', () => {
     assert.strictEqual(calculateNumber(1.5, 3.7), 6);
   });
+
+  it('should test for zero', () => {
+    assert.strictEqual(calculateNumber(0, 0), 0);
+  });
+
+  it('should test for negative', () => {
+    assert.strictEqual(calculateNumber(-1.6, -1.7), -4);
+  });
 });
