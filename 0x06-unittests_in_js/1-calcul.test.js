@@ -28,7 +28,7 @@ describe('calculateNumber', () => {
     });
   });
 
-	        describe('sUBTRACT', () => {
+  describe('sUBTRACT', () => {
     it('should test for integers', () => {
       assert.strictEqual(calculateNumber('SUBTRACT', 3, 1), 2);
     });
@@ -41,7 +41,7 @@ describe('calculateNumber', () => {
       assert.strictEqual(calculateNumber('SUBTRACT', 1.2, 3.7), -3);
     });
 
-    it('should test for rounding down', () => {
+    it('should test for rounding up', () => {
       assert.strictEqual(calculateNumber('SUBTRACT', 1.5, 3.7), -2);
     });
 
@@ -54,7 +54,7 @@ describe('calculateNumber', () => {
     });
   });
 
-	        describe('dIVIDE', () => {
+  describe('dIVIDE', () => {
     it('should test for integers', () => {
       assert.strictEqual(calculateNumber('DIVIDE', 4, 2), 2);
     });
@@ -67,7 +67,7 @@ describe('calculateNumber', () => {
       assert.strictEqual(calculateNumber('DIVIDE', 1.2, 3.7), 0.25);
     });
 
-    it('should test for rounding down', () => {
+    it('should test for rounding up', () => {
       assert.strictEqual(calculateNumber('DIVIDE', 1.5, 3.7), 0.5);
     });
 
